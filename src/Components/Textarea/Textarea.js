@@ -1,19 +1,31 @@
 import React from "react";
+import { useState } from "react";
 import { Container } from "react-bootstrap";
+import "./color.css";
+import $ from "jquery";
 
-function Output() {
+export default function Output() {
+    const [chatlog, setChatlog] = useState("");
+
+    const handleChange = (event) => {
+        setChatlog(event.target.value);
+    };
+
+    $(function () {});
+
     return (
         <Container>
             <Container>
                 <textarea
                     className="form-control textarea-input"
                     rows="15"
-                    id="chatlog-input"
+                    value={chatlog}
+                    onChange={handleChange}
                 ></textarea>
             </Container>
-            <div className="output" id="output"></div>
+            <div className="output" id="output">
+                <span>{chatlog}</span>
+            </div>
         </Container>
     );
 }
-
-export default Output;

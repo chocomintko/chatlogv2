@@ -1,6 +1,7 @@
 #bootstrap-override {
     background: #282836;
     color: #b2b2b2;
+    font-family: Arial, sans-serif;
 }
 
 #chatlog-settings-container {
@@ -20,4 +21,23 @@
 
 .btn-space {
     margin-right: 5px;
+}
+
+#output {
+    padding: 2em;
+    -webkit-font-smoothing: none!important;
+    font-weight: 700;
+    color: #fff;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+    letter-spacing: 0;
+    font-size: 12px;
+    line-height: 100%;
+}
+
+span {
+    width: max-content;
+    background-color: #000;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    padding: 1px 5px
 }
